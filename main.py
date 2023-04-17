@@ -1,2 +1,4 @@
 import ru_local as ru
-print(input(ru.RESIDENT))
+rsd = input(ru.RESIDENT)
+if rsd in ['да', 'ДА', 'Да', 'дА']:
+
