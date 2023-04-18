@@ -1,5 +1,6 @@
 import ru_local as ru
 rsd = input(ru.RESIDENT)
+rsd = rsd.strip()
 if rsd.lower() == 'да' or rsd.lower() == 'yes':
     a = input(ru.RES_Q_1)
     if a.lower() == 'да' or a.lower() == 'yes':
@@ -26,3 +27,40 @@ if rsd.lower() == 'да' or rsd.lower() == 'yes':
                             print(ru.ANSWER, "15% + 650 000", ru.CURRENCY)
                         else:
                             print(ru.ANSWER, "13%")
+else:
+    question2_1 = input(ru.NONRES_Q_1)
+    question2_1 = question2_1.strip('.,!?-:;_ ')
+    if question2_1.lower() == 'да' or question2_1.lower() == 'yes':
+        print(ru.ANSWER, '15%')
+    else:
+        question2_2 = input(ru.NONRES_Q_2)
+        question2_2 = question2_2.strip('.,!?-:;_ ')
+        if question2_2.lower() == 'да' or question2_2.lower() == 'yes':
+            print(ru.ANSWER, '15%')
+        else:
+            question2_3 = input(ru.NONRES_Q_3)
+            question2_3 = question2_3.strip('.,!?-:;_ ')
+            if question2_3.lower() == 'да' or question2_3.lower() == 'yes':
+                print(ru.ANSWER, '5%')
+            else:
+                question2_4 = input(ru.NONRES_Q_4)
+                question2_4 = question2_4.strip('.,!?-:;_ ')
+                if question2_4.lower() == 'да' or question2_4.lower() == 'yes':
+                    question2_5 = input(ru.NONRES_Q_5)
+                    question2_5 = question2_5.strip('.,!?-:;_ ')
+                    if question2_5.lower() == 'да' or question2_5.lower() == 'yes':
+                        print(ru.ANSWER, '15% + 650 000', ru.CURRENCY)
+                    else:
+                        print(ru.ANSWER, '13%')
+                else:
+                    question2_6 = input(ru.NONRES_Q_6)
+                    question2_6 = question2_6.strip('.,!?-:;_ ')
+                    if question2_6.lower() == 'да' or question2_6.lower() == 'yes':
+                        question2_5 = input(ru.NONRES_Q_5)
+                        question2_5 = question2_5.strip('.,!?-:;_ ')
+                        if question2_5.lower() == 'да' or question2_5.lower() == 'yes':
+                            print(ru.ANSWER, '15% + 650 000', ru.CURRENCY)
+                        else:
+                            print(ru.ANSWER, '13%')
+                    else:
+                        print(ru.ANSWER, '30%')
